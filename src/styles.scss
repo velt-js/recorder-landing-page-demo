@@ -1,1 +1,74 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif, Arial, Helvetica;
+}
+
+.velt-recorder-all-tool,
+.velt-recorder-audio-tool,
+.velt-recorder-video-tool,
+.velt-recorder-screen-tool {
+	background-color: transparent !important;
+	border: 1px solid rgba(255, 255, 255, 0.15) !important;
+	border-radius: 8px !important;
+
+	svg {
+		path, circle {
+			color: #fff;
+		}
+	}
+}
+
+.velt-recorder-control-panel-thread {
+	// background: white !important;
+	padding: 0.5rem 1.75rem 0rem 0px !important;
+	border-radius: 32px;
+}
+
+snippyly-recorder-control-panel-internal {
+	padding: 0 !important;
+}
+
+.velt-recording-preview-dialog-timer {
+	transform: scale(0.8) translateY(-15%);
+}
+
+.velt-recorder-audio-tool,
+.velt-recorder-video-tool,
+.velt-recorder-screen-tool,
+.velt-recorder-all-tool {
+	transform: scale(1.3);
+}
+
+app-recorder-control-panel-action-bar-waveform {
+	min-width: 60px;
+	flex: 1;
+	display: flex;
+	overflow: hidden;
+	justify-content: flex-end;
+}
+
+.mini-audio-container.thread-mode {
+	width: auto !important;
+}
+
+.velt-recorder-player-audio--top {
+	padding: 0.75rem !important;
+}
+
+.velt-recorder-control-panel-loading--thread-mode {
+	padding: 1rem !important;
+	padding: 1.25rem !important;
+	background-color: white !important;
+}
+
+app-recorder-control-panel-thread-mode {
+	padding-top: 8px !important
+}
+
+.velt-recorder-control-panel-action-bar--thread-mode {
+	gap: 0.5rem !important;
+	background-color: white !important;
+	padding-top: 12px !important;
+}
