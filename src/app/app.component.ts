@@ -28,6 +28,8 @@ export class AppComponent implements OnInit {
 			this.recordingType = params['type'] || 'all';
 		});
 
+		this.RECORDER_ID = localStorage.getItem('recorderId') || '';
+
 		// Initialize Velt
 		this.client = await initVelt('AN5s6iaYIuLLXul0X4zf');
 
@@ -46,10 +48,22 @@ export class AppComponent implements OnInit {
 			this.client.setDocument('landing-page-demo-recorder-audio', { documentName: 'landing-page-demo-recorder-audio' });
 
 			const recorderControlPanel = document.querySelector('velt-recorder-control-panel');
-			
+
 			recorderControlPanel?.addEventListener('onRecordedData', (s: any) => {
 				console.log('onRecordedData', s?.detail);
 				this.RECORDER_ID = s.detail.id;
+				console.log(this.RECORDER_ID);
+
+				localStorage.setItem('recorderId', this.RECORDER_ID);
+
+			});
+
+			const recorderPlayer = document.querySelector('velt-recorder-player');
+
+			recorderPlayer?.addEventListener('onDelete', (s: any) => {
+				console.log('DELETE', s?.detail);
+				this.RECORDER_ID = '';
+				localStorage.removeItem('recorderId');
 			});
 
 		}
