@@ -17,14 +17,14 @@ export class AppComponent implements OnInit {
 	title = 'recorder';
 	client: Velt | undefined;
 	RECORDER_ID = '';
-	backgroundColor: string = '#2E2E8C';
+	backgroundColor: string = '#192A7C';
 	recordingType: string = 'all';
 
 	constructor(private route: ActivatedRoute) { }
 
 	async ngOnInit() {
 		this.route.queryParams.subscribe(params => {
-			this.backgroundColor = params['backgroundColor'] || '#2E2E8C';
+			this.backgroundColor = params['backgroundColor'] || '#192A7C';
 			this.recordingType = params['type'] || 'all';
 		});
 

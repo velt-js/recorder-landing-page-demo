@@ -1,12 +1,12 @@
-<section class="center" [style.background]="backgroundColor">
+<section class="center">
 
-	<main class="main">
+	<main class="main" [style.background]="backgroundColor">
 		<velt-recorder-notes shadow-dom="false"></velt-recorder-notes>
 
 		<div class="header"></div>
 		<div class="content">
 			<div class="toolbar">
-				<velt-recorder-tool [attr.type]="recordingType" shadow-dom="false" ></velt-recorder-tool>
+				<velt-recorder-tool [attr.type]="recordingType" shadow-dom="false"></velt-recorder-tool>
 				<p>Click to start recording</p>
 				<velt-recorder-control-panel mode="thread" shadow-dom="false"></velt-recorder-control-panel>
 			</div>
