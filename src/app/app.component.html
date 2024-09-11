@@ -4,7 +4,7 @@
 
 		<div class="header"></div>
 		<div class="content">
-			<div class="toolbar">
+			<div class="toolbar" [class.screen]="recordingType === 'screen'">
 				<velt-recorder-tool [attr.type]="recordingType" shadow-dom="false"></velt-recorder-tool>
 				<p>Click to start recording</p>
 				<velt-recorder-control-panel mode="thread" shadow-dom="false"></velt-recorder-control-panel>

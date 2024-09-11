@@ -44,6 +44,7 @@ snippyly-recorder-control-panel-internal {
 .velt-recorder-screen-tool,
 .velt-recorder-all-tool {
 	transform: scale(1.3);
+	margin-top: 1rem;
 }
 
 app-recorder-control-panel-action-bar-waveform {
@@ -82,4 +83,14 @@ app-recorder-control-panel-thread-mode {
 .velt-recorder-control-panel-action-bar--right-part,
 app-recorder-control-panel-action-bar-waveform {
 	margin-top: 12px;
+}
+
+.screen,
+.cdk-overlay-container {
+
+	.velt-recorder-control-panel-action-bar--left-part,
+	.velt-recorder-control-panel-action-bar--right-part,
+	app-recorder-control-panel-action-bar-waveform {
+		margin-top: 0px !important;
+	}
 }
