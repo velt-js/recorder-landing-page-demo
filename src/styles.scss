@@ -5,7 +5,8 @@
 	font-family: sans-serif, Arial, Helvetica;
 }
 
-body, html {
+body,
+html {
 	background-color: transparent;
 }
 
@@ -18,15 +19,15 @@ body, html {
 	border-radius: 8px !important;
 
 	svg {
-		path, circle {
+
+		path,
+		circle {
 			color: #fff;
 		}
 	}
 }
 
 .velt-recorder-control-panel-thread {
-	// background: white !important;
-	padding: 0.5rem 1.75rem 0rem 0px !important;
 	border-radius: 32px;
 }
 
@@ -46,7 +47,7 @@ snippyly-recorder-control-panel-internal {
 }
 
 app-recorder-control-panel-action-bar-waveform {
-	min-width: 60px;
+	min-width: 40px;
 	flex: 1;
 	display: flex;
 	overflow: hidden;
@@ -72,7 +73,13 @@ app-recorder-control-panel-thread-mode {
 }
 
 .velt-recorder-control-panel-action-bar--thread-mode {
-	gap: 0.5rem !important;
+	gap: 0.25rem !important;
 	background-color: white !important;
-	padding-top: 12px !important;
+	border-radius: 4rem;
+}
+
+.velt-recorder-control-panel-action-bar--left-part,
+.velt-recorder-control-panel-action-bar--right-part,
+app-recorder-control-panel-action-bar-waveform {
+	margin-top: 12px;
 }
