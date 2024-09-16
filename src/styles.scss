@@ -66,7 +66,7 @@ app-recorder-control-panel-action-bar-waveform {
 .velt-recorder-control-panel-loading--thread-mode {
 	padding: 1rem !important;
 	padding: 1.25rem !important;
-	background-color: white !important;
+	background-color: light-dark(white, #1A1A1A) !important;
 }
 
 app-recorder-control-panel-thread-mode {
@@ -75,7 +75,7 @@ app-recorder-control-panel-thread-mode {
 
 .velt-recorder-control-panel-action-bar--thread-mode {
 	gap: 0.25rem !important;
-	background-color: white !important;
+	background-color: light-dark(white, #1A1A1A) !important;
 	border-radius: 4rem;
 }
 
@@ -97,4 +97,30 @@ app-recorder-control-panel-action-bar-waveform {
 
 .velt-recording-preview--bottom-panel {
 	display: none !important;
+}
+
+.velt-recording-preview--icon-button {
+	background-color: light-dark(white, #1A1A1A) !important;
+	border: 1px solid light-dark(rgba(0, 0, 0, 0.15), rgba(255, 255, 255, 0.15)) !important;
+
+	& svg {
+		path {
+			stroke: light-dark(black, white) !important;
+		}
+	}
+}
+
+.velt-recorder-control-panel-loading--text {
+	color: light-dark(black, white) !important;
+}
+
+.velt-recorder-control-panel-loading--loader-bar {
+	border-top-color: light-dark(#9491F8, #625DF5) !important;
+	border-bottom-color: light-dark(#e2e2e2, #393939) !important;
+	border-right-color: light-dark(#e2e2e2, #393939) !important;
+	border-left-color: light-dark(#e2e2e2, #393939) !important;
+}
+
+.velt-recorder-player-audio--top{
+	padding: 1rem !important;
 }

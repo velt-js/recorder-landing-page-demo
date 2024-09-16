@@ -19,6 +19,7 @@ export class AppComponent implements OnInit {
 	RECORDER_ID = '';
 	backgroundColor: string = '#192A7C';
 	recordingType: string = 'all';
+	darkMode: boolean = false;  // Add this line
 
 	constructor(private route: ActivatedRoute) { }
 
@@ -26,6 +27,7 @@ export class AppComponent implements OnInit {
 		this.route.queryParams.subscribe(params => {
 			this.backgroundColor = params['backgroundColor'] || '#192A7C';
 			this.recordingType = params['type'] || 'all';
+			this.darkMode = params['darkMode'] === 'true';
 		});
 
 		this.RECORDER_ID = localStorage.getItem('recorderId') || '';
@@ -36,7 +38,7 @@ export class AppComponent implements OnInit {
 		if (this.client) {
 			// Create the Velt user object
 			const user: User = {
-				userId: 'sad',
+				userId: 'gene',
 				name: 'Gene',
 				email: 'gene@velt.dev',
 				color: '#EBA900',
@@ -46,6 +48,13 @@ export class AppComponent implements OnInit {
 			this.client?.identify(user);
 
 			this.client.setDocument('landing-page-demo-recorder-audio', { documentName: 'landing-page-demo-recorder-audio' });
+
+			console.log(this.darkMode);
+			if (this.darkMode) {
+				this.client?.setDarkMode(true);
+				document.body.style.colorScheme = this.darkMode ? 'dark' : 'light';
+			}
+
 
 			const recorderControlPanel = document.querySelector('velt-recorder-control-panel');
 
