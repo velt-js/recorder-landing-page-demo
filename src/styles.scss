@@ -36,7 +36,7 @@ snippyly-recorder-control-panel-internal {
 }
 
 .velt-recording-preview-dialog-timer {
-	transform: scale(0.8) translateY(-15%);
+	transform: scale(0.8) translateY(-5%);
 }
 
 .velt-recorder-audio-tool,
@@ -93,4 +93,8 @@ app-recorder-control-panel-action-bar-waveform {
 	app-recorder-control-panel-action-bar-waveform {
 		margin-top: 0px !important;
 	}
+}
+
+.velt-recording-preview--bottom-panel {
+	display: none !important;
 }
