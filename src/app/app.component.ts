@@ -28,6 +28,8 @@ export class AppComponent implements OnInit {
 			this.backgroundColor = params['backgroundColor'] || '#192A7C';
 			this.recordingType = params['type'] || 'all';
 			this.darkMode = params['darkMode'] === 'true';
+
+			document.body.style.backgroundColor = this.backgroundColor;
 		});
 
 		this.RECORDER_ID = localStorage.getItem('recorderId') || '';
