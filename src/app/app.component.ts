@@ -40,6 +40,7 @@ export class AppComponent implements OnInit {
 		if (this.client) {
 			// Create the Velt user object
 			const user: User = {
+				organizationId: 'recorder_lp_demo',
 				userId: 'gene',
 				name: 'Gene',
 				email: 'gene@velt.dev',
